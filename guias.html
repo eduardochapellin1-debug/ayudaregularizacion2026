@@ -38,28 +38,78 @@
     <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver al Asistente</a>
 
     <div class="grid">
-      <!-- Tarjeta de Artículo 1 -->
-      <article class="post-card">
-        <h2>Guía del Arraigo Social 2026</h2>
-        <p>Descubre los requisitos actualizados, cómo presentar el informe de inserción social y los tipos de contrato válidos para este año.</p>
-        <a href="#" class="btn">Leer guía completa</a>
-      </article>
+        <!-- Tarjeta de Artículo 1 -->
+        <article class="post-card">
+            <h2>Guía del Arraigo Social 2026</h2>
+            <p>Descubre los requisitos actualizados, cómo presentar el informe de inserción social y los tipos de contrato válidos para este año.</p>
+            <button class="btn" onclick="toggleGuia('guia-arraigo')">Leer guía completa</button>
+        </article>
 
-      <!-- Tarjeta de Artículo 2 -->
-      <article class="post-card">
-        <h2>Cómo Solicitar Cita en Extranjería</h2>
-        <p>Manual paso a paso para acceder al sistema de cita previa estatal, evitar bloqueos y preparar la documentación necesaria.</p>
-        <a href="#" class="btn">Leer guía completa</a>
-      </article>
+        <!-- Tarjeta de Artículo 2 -->
+        <article class="post-card">
+            <h2>Cómo Solicitar Cita en Extranjería</h2>
+            <p>Manual paso a paso para acceder al sistema de cita previa estatal, evitar bloqueos y preparar la documentación necesaria.</p>
+            <button class="btn" onclick="toggleGuia('guia-cita')">Leer guía completa</button>
+        </article>
 
-      <!-- Tarjeta de Artículo 3 -->
-      <article class="post-card">
-        <h2>Renovación del NIE/TIE paso a paso</h2>
-        <p>Evita quedar en situación irregular. Te explicamos los plazos legales para renovar tu tarjeta de residencia y las tasas del modelo 790.</p>
-        <a href="#" class="btn">Leer guía completa</a>
-      </article>
+        <!-- Tarjeta de Artículo 3 -->
+        <article class="post-card">
+            <h2>Renovación del NIE/TIE paso a paso</h2>
+            <p>Evita quedar en situación irregular. Le explicamos los plazos legales para renovar tu tarjeta de residencia y las tasas del modelo 790.</p>
+            <button class="btn" onclick="toggleGuia('guia-nie')">Leer guía completa</button>
+        </article>
     </div>
-  </main>
 
+    <!-- Secciones Desplegables de Contenido Factual de Alto Valor -->
+    <div id="guia-arraigo" class="guia-content" style="display:none; margin-top: 2rem; background: white; padding: 2rem; border-radius: 14px; border: 1px solid var(--border);">
+        <h2>Guía del Arraigo Social 2026</h2>
+        <p>El arraigo social es una autorización de residencia temporal por circunstancias excepcionales que se concede a ciudadanos extranjeros que acrediten una permanencia continuada en España durante un período mínimo de tres años y cuenten con un contrato de trabajo firmado, vínculos familiares o un informe de inserción social.</p>
+        <h3>Requisitos Clave en 2026:</h3>
+        <ul>
+            <li><strong>Permanencia:</strong> Tres años de estancia continuada en territorio español mediante padrón histórico.</li>
+            <li><strong>Contrato laboral:</strong> Duración garantizada para el periodo mínimo legal establecido con salario conforme al convenio.</li>
+            <li><strong>Antecedentes:</strong> Carencia de antecedentes penales en España y en el país de origen.</li>
+        </ul>
+    </div>
+
+    <div id="guia-cita" class="guia-content" style="display:none; margin-top: 2rem; background: white; padding: 2rem; border-radius: 14px; border: 1px solid var(--border);">
+        <h2>Cómo Solicitar Cita en Extranjería</h2>
+        <p>La solicitud de cita previa para los trámites de extranjería se realiza telemáticamente a través de la Sede Electrónica de la Secretaría de Estado de Administraciones Públicas.</p>
+        <h3>Pasos para la Obtención de Cita:</h3>
+        <ol>
+            <li>Acceder al portal oficial de Cita Previa de Extranjería.</li>
+            <li>Seleccionar la provincia de residencia actual.</li>
+            <li>Elegir el trámite específico correspondiente (Toma de huellas, Autorizaciones, etc.).</li>
+            <li>Ingresar el número de pasaporte, NIE o DNI del solicitante y rellenar los datos de contacto directos.</li>
+        </ol>
+    </div>
+
+    <div id="guia-nie" class="guia-content" style="display:none; margin-top: 2rem; background: white; padding: 2rem; border-radius: 14px; border: 1px solid var(--border);">
+        <h2>Renovación del NIE/TIE paso a paso</h2>
+        <p>La renovación de las autorizaciones de residencia y trabajo debe solicitarse obligatoriamente durante los 60 días naturales previos a la fecha de expiración de la tarjeta, extendiéndose el plazo legal de prórroga hasta 90 días posteriores a su vencimiento.</p>
+        <h3>Procedimiento Estándar:</h3>
+        <ul>
+            <li><strong>Presentación:</strong> Se aconseja tramitar de forma telemática mediante la plataforma MERCURIO utilizando certificado digital.</li>
+            <li><strong>Tasas Obligatorias:</strong> Liquidación del Modelo 790 correspondiente según el tipo de renovación de residencia.</li>
+            <li><strong>Documentación:</strong> Pasaporte completo en vigor, acreditación de medios económicos y continuidad en la actividad laboral o formativa.</li>
+        </ul>
+    </div>
+</main>
+
+<!-- Script de Interactividad Fluida -->
+<script>
+    function toggleGuia(id) {
+        // Ocultar todos los bloques primero
+        document.querySelectorAll('.guia-content').forEach(function(el) {
+            el.style.display = 'none';
+        });
+        // Mostrar la guía seleccionada con scroll suave
+        var selected = document.getElementById(id);
+        if (selected) {
+            selected.style.display = 'block';
+            selected.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
 </body>
 </html>
