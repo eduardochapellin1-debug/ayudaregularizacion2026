@@ -5,15 +5,27 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://ayudaregularizacion2026.comguias.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ayudaregularizacion2026.comcontacto.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ayudaregularizacion2026.comquienes-somos.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ayudaregularizacion2026.comaviso-legal.html</loc>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ayudaregularizacion2026.comprivacidad.html</loc>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ayudaregularizacion2026.comcookies.html</loc>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
   </url>
 </urlset>
