@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacto | Ayuda Regularización 2026</title>
-  <link rel="stylesheet" href="https://cloudflare.com">
-  <style>
-    :root {
-      --gov-blue: #0b3a75;
-      --gov-navy: #072b57;
-      --bg: #f2f6fc;
-      --card: #ffffff;
-      --text: #1a1a1a;
-      --muted: #4b5563;
-      --border: #dbe4f1;
-    }
-    body { font-family: "Segoe UI", sans-serif; margin: 0; background: var(--bg); color: var(--text); }
-    .header { background: var(--gov-blue); color: white; padding: 2.5rem 1rem; text-align: center; }
-    .container { width: min(100%, 600px); margin: 2rem auto; padding: 0 1rem; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; box-shadow: 0 10px 30px rgba(11, 58, 117, 0.05); }
-    .field { display: grid; gap: .4rem; margin-bottom: 1.2rem; }
-    label { font-size: .95rem; font-weight: 600; color: var(--gov-navy); }
-    input, textarea { border: 1px solid #c5d6ef; border-radius: 8px; padding: .7rem; font-size: .96rem; width: 100%; font-family: inherit; }
-    button { background: var(--gov-blue); color: #fff; border: none; border-radius: 10px; padding: .8rem 1.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; width: 100%; }
-    button:hover { background: var(--gov-navy); }
-    .back-link { display: inline-block; margin-bottom: 1.5rem; color: var(--gov-blue); text-decoration: none; font-weight: bold; }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto | Ayuda Regularización 2026</title>
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --gov-blue: #0b3a75;
+            --gov-navy: #072b57;
+            --bg: #f2f6fc;
+            --card: #ffffff;
+            --text: #1a1a1a;
+            --muted: #4b5563;
+            --border: #dbe4f1;
+        }
+        body { font-family: "Segoe UI", sans-serif; margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .header { background: var(--gov-blue); color: white; padding: 2.5rem 1rem; text-align: center; }
+        .container { width: min(100%, 800px); margin: 2rem auto; padding: 0 1rem; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; box-shadow: 0 10px 30px rgba(11, 58, 117, 0.05); }
+        .field { display: grid; gap: .4rem; margin-bottom: 1.2rem; }
+        label { font-size: .95rem; font-weight: 600; color: var(--gov-navy); }
+        input, textarea { border: 1px solid #c5d6ef; border-radius: 8px; padding: .7rem; font-size: .96rem; width: 100%; font-family: inherit; box-sizing: border-box; }
+        button { background: var(--gov-blue); color: #fff; border: none; border-radius: 10px; padding: .8rem 1.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; width: 100%; margin-top: 10px; }
+        button:hover { background: var(--gov-navy); }
+        .back-link { display: inline-block; margin-bottom: 1.5rem; color: var(--gov-blue); text-decoration: none; font-weight: bold; }
+    </style>
 </head>
 <body>
 
-  <header class="header">
-    <h1>Formulario de Contacto</h1>
-    <p>¿Tienes dudas o sugerencias? Escríbenos directamente</p>
-  </header>
+    <header class="header">
+        <h1>Formulario de Contacto</h1>
+        <p>¿Tienes dudas o sugerencias? Escríbenos directamente</p>
+    </header>
 
-  <main class="container">
-    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver al Asistente</a>
+    <main class="container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Volver al Asistente</a>
 
-    <div class="card">
-      <form action="#" method="POST">
-        <div class="field">
-          <label for="name">Nombre completo</label>
-          <input type="text" id="name" name="name" required placeholder="Tu nombre">
+        <div class="card">
+            <p style="margin-bottom: 25px; text-align: center; color: var(--muted);">
+                Si lo prefiere, puede escribirnos directamente a: <br>
+                <a href="mailto:nutriservices2525@gmail.com" style="color: var(--gov-blue); text-decoration: underline; font-weight: bold;">nutriservices2525@gmail.com</a>
+            </p>
+            
+            <!-- Formulario conectado a Formspree para recibir correos reales -->
+            <form action="https://formspree.io" method="POST">
+                <div class="field">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                </div>
+                
+                <div class="field">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+                </div>
+                
+                <div class="field">
+                    <label for="message">Mensaje / Consulta</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Escribe aquí tu consulta..."></textarea>
+                </div>
+                
+                <button type="submit">Enviar Mensaje</button>
+            </form>
         </div>
-        <div class="field">
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
-        </div>
-        <div class="field">
-          <label for="message">Mensaje / Consulta</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Escribe aquí tu consulta..."></textarea>
-        </div>
-        <button type="submit">Enviar Mensaje</button>
-      </form>
-    </div>
-  </main>
+    </main>
 
 </body>
 </html>
